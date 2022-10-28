@@ -19,24 +19,24 @@ const boxBig = document.getElementsByClassName("box__big")[0];
 const boxSmall = document.getElementsByClassName('box__small');
 
 //box1
-randomButton.addEventListener('click', function(){
-    randomNumber.textContent=Math.floor(Math.random()*99);
+randomButton.addEventListener('click', function () {
+    randomNumber.textContent = Math.floor(Math.random() * 99);
 });
 //box2
-boxCoord.addEventListener('mouseover', function(){
-    boxCoord.addEventListener('mousemove', function(e){
-        //xCoord.textContent=boxCoord.pageX;
-        xCoord.textContent=e.offsetX;
-        //yCoord.textContent=boxCoord.pageY;
-        yCoord.textContent=e.offsetY;
-    })
+
+boxCoord.addEventListener('mousemove', function () {
+    //xCoord.textContent=boxCoord.pageX;
+    xCoord.textContent = Event.offsetX;
+    //yCoord.textContent=boxCoord.pageY;
+    yCoord.textContent = Event.offsetY;
 });
+
 //box3
-hideBottom.addEventListener('click', function(){
+hideBottom.addEventListener('click', function () {
     textHidden.classList.toggle('hidden');
 });
 //box4
-htmlButton.addEventListener('click', function(){
+htmlButton.addEventListener('click', function () {
     htmlButton.classList.add('active');
     cssButton.classList.remove('active');
     jsButton.classList.remove('active');
@@ -44,7 +44,7 @@ htmlButton.addEventListener('click', function(){
     cssContent.classList.remove('active');
     jsContent.classList.remove('active');
 });
-cssButton.addEventListener('click', function(){
+cssButton.addEventListener('click', function () {
     cssButton.classList.add('active');
     htmlButton.classList.remove('active');
     jsButton.classList.remove('active');
@@ -52,7 +52,7 @@ cssButton.addEventListener('click', function(){
     htmlContent.classList.remove('active');
     jsContent.classList.remove('active');
 });
-jsButton.addEventListener('click', function(){
+jsButton.addEventListener('click', function () {
     jsButton.classList.add('active');
     cssButton.classList.remove('active');
     htmlButton.classList.remove('active');
@@ -61,12 +61,12 @@ jsButton.addEventListener('click', function(){
     htmlContent.classList.remove('active');
 });
 //box5
-for(let el of boxSmall){
-    el.addEventListener('click', function(){
-        /*let elBuf=document.getElementsByClassName(el.classList[1])[0];
-        boxBig.style.backgroundImg=elBuf.style.backgroundImg;
-        console.log(elBuf);*/
-        let elBuf=document.getElementsByClassName('img1')[0];
-        console.log(elBuf.getAttribute('background-image'));
+
+for (let el of boxSmall) {
+    el.addEventListener('click', function () {
+        let curentEl = el.classList[1];
+        //console.log(curentEl);
+        boxBig.classList.remove(boxBig.classList[1]);
+        boxBig.classList.add(curentEl);
     })
 }
