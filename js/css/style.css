@@ -37,3 +37,78 @@ h1{
 .content.hidden{
     visibility: hidden;
 }
+
+.box4{
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+}
+
+.box4 .left-column{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aquamarine;
+    height: 100%;
+}
+
+.box4__button{
+    padding:5px 5px;
+}
+.box4__button:hover{
+    background-color: rgb(150, 202, 231);
+    cursor: pointer;
+}
+
+.box4__button.active{
+    background-color: rgb(41, 202, 149);
+}
+
+.right-column{
+    height: 100%;
+}
+.right-column__content{
+    display:none;
+}
+
+.right-column__content.active{
+    display:flex;  
+    align-items: flex-start;
+    padding:10px;   
+}
+
+.box5{
+    width:200px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.box__big{
+    width: 150px;
+    height: 150px;
+    background-image: url("../img/img1.png");
+    background-size: cover;
+}
+.box__small{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+.box__small:hover{
+    background-color: rgb(245, 235, 224);
+    cursor: pointer;
+}
+.box__small.img1{
+    background-image: url("../img/img1.png");
+    background-size: cover;
+}
+.box__small.img2{
+    background-image: url("../img/img2.svg");
+    background-size: cover;
+}
+.box__small.img3{
+    background-image: url("../img/img3.svg");
+    background-size: cover;
+}
