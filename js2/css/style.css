@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	display: none;
+}
+
+.box.active {
+	background-color: antiquewhite;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	margin: auto;
+	margin-top: 200px;
+	padding: 10px;
+}
+
+
+
+.box .area {
+	margin: 5px 0px 10px 0px;
+}
+
+.enter {
+	display: flex;
+	width: 30%;
+
+}
+
+.enter button {
+	margin-right: 30px;
+}
+
+form .remember {
+	display: flex;
+	margin-bottom: 10px;
+
+}
+
+form .remember p {
+	margin-right: 10px;
+
+}
+
+.links {
+	margin: 20px;
+}
+
+.links>a {
+	margin-right: 20px;
+}
